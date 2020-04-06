@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Clases 2020c1</string>
+    <string name="hello">Hola a todos!</string>
+    <string name="soy_un_button">Soy un Button</string>
+    <string name="soy_un_textview">Soy un TextView</string>
+    <string name="ok">Ok</string>
 </resources>
