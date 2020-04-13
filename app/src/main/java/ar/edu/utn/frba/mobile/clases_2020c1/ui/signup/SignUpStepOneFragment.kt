@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import ar.edu.utn.frba.mobile.clases_2020c1.R
 import kotlinx.android.synthetic.main.fragment_sign_up_step_one.*
 
@@ -27,7 +27,7 @@ class SignUpStepOneFragment : Fragment() {
             listener!!.onSignUpNextStep()
         }
 
-        viewModel = ViewModelProviders.of(activity!!).get(SignUpViewModel::class.java)
+        viewModel = ViewModelProvider(activity!!).get(SignUpViewModel::class.java)
 
         firstName.setText(viewModel.firstName)
         lastName.setText(viewModel.lastName)
