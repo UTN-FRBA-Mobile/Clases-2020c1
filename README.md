@@ -82,5 +82,5 @@ Picasso.get().load(Uri.parse(/* la url a bajar */).into(/* el imageView donde va
 ```
 
 * Problemas comunes y sus soluciones:
-- Si al hacer el GET a la API encuentran un error del tipo ```java.net.SocketException: socket failed: EPERM (Operation not permitted)```, desinstalen la app del emulador o del dispositivo donde están probando y vuelvan a instalarla/correrla. De esta forma el posible problema de permisos que puedan estar teniendo se va a solucionar.
-- Recuerden actualizar los metodos ```getItemViewType```, ```onBindViewHolder``` y ```getItemCount``` del ```TweetsAdapter```. No se olviden ninguno.
+    - Si al hacer el GET a la API encuentran un error del tipo ```java.net.SocketException: socket failed: EPERM (Operation not permitted)```, desinstalen la app del emulador o del dispositivo donde están probando y vuelvan a instalarla/correrla. De esta forma el posible problema de permisos que puedan estar teniendo se va a solucionar.
+    - Recuerden actualizar los metodos ```getItemViewType```, ```onBindViewHolder``` y ```getItemCount``` del ```TweetsAdapter```. No se olviden ninguno.
