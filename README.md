@@ -43,7 +43,7 @@ Pueden usar `data class` de Kotlin.
 
 * Armar la interfaz para hacer la llamada con RetroFit a la siguiente URL:
 
-    `https://demo0682762.mockable.io/list`
+    `https://demo1958294.mockable.io/list`
 
 Hay una breve explicación de RetroFit en su página: https://square.github.io/retrofit/
 (con leer la introducción alcanza)
@@ -53,7 +53,7 @@ Hay una breve explicación de RetroFit en su página: https://square.github.io/r
 ```kotlin
 val service = Retrofit.Builder()
     .addConverterFactory(GsonConverterFactory.create()) // Para parsear automágicamente el json
-    .baseUrl("https://demo0682762.mockable.io/")
+    .baseUrl("https://demo1958294.mockable.io/")
     .build()
     .create(TweetsService::class.java) // la interfaz que diseñaron antes
 ```
@@ -80,3 +80,7 @@ Acá `Respuesta` sería el nombre de la data class que crearon antes.
 ```
 Picasso.get().load(Uri.parse(/* la url a bajar */).into(/* el imageView donde va la imagen */)
 ```
+
+* Problemas comunes y sus soluciones:
+- Si al hacer el GET a la API encuentran un error del tipo ```java.net.SocketException: socket failed: EPERM (Operation not permitted)```, desinstalen la app del emulador o del dispositivo donde están probando y vuelvan a instalarla/correrla. De esta forma el posible problema de permisos que puedan estar teniendo se va a solucionar.
+- Recuerden actualizar los metodos ```getItemViewType```, ```onBindViewHolder``` y ```getItemCount``` del ```TweetsAdapter```. No se olviden ninguno.
