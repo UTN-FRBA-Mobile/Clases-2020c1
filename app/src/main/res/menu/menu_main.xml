@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/action_toggle_view_list"
+            android:orderInCategory="102"
+            android:title="VER EN LISTA"
+            app:showAsAction="always" />
+
+    <item
+            android:id="@+id/action_toggle_view_grid"
+            android:orderInCategory="103"
+            android:title="VER EN GRILLA"
+            app:showAsAction="always" />
+</menu>
