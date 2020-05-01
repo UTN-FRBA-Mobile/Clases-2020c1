@@ -2,10 +2,7 @@ package ar.edu.utn.frba.mobile.clases_2020c1.utils.storage.fileSystem
 
 import android.content.Context
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.net.Uri
 import android.os.Environment
-import android.provider.MediaStore
 import android.util.Log
 import java.io.File
 import java.io.FileOutputStream
@@ -13,16 +10,16 @@ import java.io.IOException
 
 class ExternalStorage {
     companion object {
-        fun getFileUri(fileName: String): String? {
-            val file = File(getAppFolder() + fileName)
+        fun getFileUri(context: Context, fileName: String): String? {
+            val file = File(getAppFolder(context) + fileName)
             if (file.exists()) {
                 return file.toURI().toString()
             }
             return null
         }
 
-        fun saveFile(bitmap: Bitmap, fileName: String) : File {
-            val file = File(getAppFolder() + fileName + ".JPEG")
+        fun saveFile(context: Context, bitmap: Bitmap, fileName: String) : File {
+            val file = File(getAppFolder(context) + fileName + ".JPEG")
             try {
                 file.createNewFile()
                 val ostream = FileOutputStream(file)
@@ -36,8 +33,8 @@ class ExternalStorage {
             return file
         }
 
-        fun deleteFile(fileName: String) {
-            val file = File(getAppFolder() + fileName)
+        fun deleteFile(context: Context, fileName: String) {
+            val file = File(getAppFolder(context) + fileName)
             if (file.exists()) {
                 file.delete()
             }
@@ -73,14 +70,14 @@ class ExternalStorage {
             }
         }
 
-        fun getFiles(): Array<out File>? {
-            val appFolder = ExternalStorage.getAppFolder()
+        fun getFiles(context: Context): Array<out File>? {
+            val appFolder = getAppFolder(context)
             val directory = File(appFolder)
             return directory.listFiles()
         }
 
-        private fun getAppFolder(): String {
-            val path = Environment.getExternalStorageDirectory().path + "/clases_2020c1/"
+        private fun getAppFolder(context: Context): String {
+            val path = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES)!!.path + "/clases_2020c1/"
             val folder = File(path)
             if (!folder.exists()) {
                 folder.mkdirs()
