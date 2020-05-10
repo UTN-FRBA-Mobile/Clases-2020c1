@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/fondo"
 
 
     tools:context=".MainActivity">
@@ -25,7 +26,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/temperaturaIngresadaC"
             android:layout_weight="1"
-            android:hint="Ingrese Temperatura en Celsius"/>
+            android:hint="Ingresá Temperatura en Celsius"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,10 +39,11 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@android:drawable/stat_notify_sync"
-            android:tint="@color/colorPrimary"/>
+            android:backgroundTint="#8cdec6"
+            android:src="@android:drawable/stat_notify_sync" />
     </LinearLayout>
     <LinearLayout
+        android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -55,7 +57,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/temperaturaIngresadaK"
             android:layout_weight="1"
-            android:hint="Ingrese Temperatura en Kelvin"/>
+            android:hint="Ingresá Temperatura en Kelvin"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,8 +70,9 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:backgroundTint="#8cdec6"
             android:src="@android:drawable/stat_notify_sync"
-            android:tint="@color/colorPrimary"/>
+            android:tint="@color/colorPrimary" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -86,7 +89,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/temperaturaIngresadaF"
             android:layout_weight="1"
-            android:hint="Ingrese Temperatura en Fahrenheit"/>
+            android:hint="Ingresá Temperatura en Fahrenheit"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -99,14 +102,14 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@android:drawable/stat_notify_sync"
-            android:tint="@color/colorPrimary"/>
+            android:backgroundTint="#8cdec6"
+            android:src="@android:drawable/stat_notify_sync" />
     </LinearLayout>
 
     <ImageView
-        android:paddingTop="30dp"
+        android:paddingTop="50dp"
         android:layout_width="247dp"
         android:layout_height="291dp"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/termo2" />
+        android:src="@drawable/termokid" />
 </LinearLayout>

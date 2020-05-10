@@ -39,7 +39,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:src="@android:drawable/stat_notify_sync"
-            android:tint="@color/colorPrimary"/>
+            android:backgroundTint="#8cdec6"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -69,7 +69,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:src="@android:drawable/stat_notify_sync"
-            android:tint="@color/colorPrimary"/>
+            android:backgroundTint="#8cdec6"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -100,7 +100,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:src="@android:drawable/stat_notify_sync"
-            android:tint="@color/colorPrimary"/>
+            android:backgroundTint="#8cdec6"/>
     </LinearLayout>
 
     <ImageView
